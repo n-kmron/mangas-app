@@ -23,4 +23,12 @@ class Mangas
                               [$title, $author, $nbvol, $date, $couverture, $isFinish]
                     );
           }
+
+
+          public static function getCharacters($serie_id)
+          {
+                    $pdo = DB::getPdo();
+                    $characters = DB::select("SELECT * FROM personnages WHERE serie_id = :serie_id;", ['serie_id' => $serie_id]);
+                    return $characters;
+          }
 }

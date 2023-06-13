@@ -32,4 +32,12 @@ class MangasCtrl extends Controller
             return redirect('newserie')->with('message', "La série n'a pas pu être enregistrée");
         }
     }
+
+
+
+    public function getCharacters($serie_id)
+    {
+        $result = Mangas::getCharacters($serie_id);
+        return json_encode($result);
+    }
 }
