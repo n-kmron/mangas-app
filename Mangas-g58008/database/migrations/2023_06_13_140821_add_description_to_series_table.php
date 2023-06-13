@@ -11,8 +11,28 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::table('series', function (Blueprint $table) {
-            $table->text('description')->nullable()->after('serie_finie');
+        // Création de la table 'series'
+        Schema::create('series', function (Blueprint $table) {
+            $table->id();
+            $table->string('titre');
+            $table->string('auteur');
+            $table->smallInteger('nombre_volumes');
+            $table->date('date_premiere_parution');
+            $table->string('couverture');
+            $table->boolean('serie_finie');
+            $table->string('description')->nullable();
+            $table->timestamps();
+        });
+
+        // Création de la table 'personnages'
+        Schema::create('personnages', function (Blueprint $table) {
+            $table->id();
+            $table->string('nom');
+            $table->unsignedBigInteger('serie_id');
+            $table->string('type');
+            $table->string('description');
+            $table->foreign('serie_id')->references('id')->on('series');
+            $table->timestamps();
         });
     }
 
@@ -21,8 +41,7 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::table('series', function (Blueprint $table) {
-            $table->dropColumn('description');
-        });
+        Schema::dropIfExists('personnages');
+        Schema::dropIfExists('series');
     }
 };

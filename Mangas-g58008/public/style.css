@@ -26,6 +26,7 @@ footer {
 
 main {
           display: flex;
+          min-height: 68vh;
 }
 
 main nav {
