@@ -31,9 +31,11 @@
         @if ($serie->id == $urlId)
         @isset($characters)
         <h5>Les personnages:</h5>
-        @foreach ($characters as $character)
+        @forelse ($characters as $character)
         <p>{{ $character->nom }} (type: {{ $character->type }}) : {{ $character->description }}</p>
-        @endforeach
+        @empty
+        <p>Il n'y a aucun personnage pour cette série !</p>
+        @endforelse
         @endisset @endif
 
     </div>

@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use Illuminate\Support\Facades\Redirect;
 
 /*
 |--------------------------------------------------------------------------
@@ -23,7 +24,7 @@ Route::get(
 
 Route::get('/serie/create', function () {
     return view('newserie');
-})->name('newserie');
+});
 
 Route::post(
     '/serie/create',
