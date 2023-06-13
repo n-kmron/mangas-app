@@ -19,7 +19,6 @@ class SeriesAndCharactersSeeder extends Seeder
                 'date_premiere_parution' => '1997-07-22',
                 'couverture' => 'one-piece.jpg',
                 'serie_finie' => false,
-                'description' => 'Description de One Piece',
             ],
             [
                 'id' => 2,
@@ -29,7 +28,6 @@ class SeriesAndCharactersSeeder extends Seeder
                 'date_premiere_parution' => '1999-09-21',
                 'couverture' => 'naruto.jpg',
                 'serie_finie' => true,
-                'description' => 'Description de Naruto',
             ],
             [
                 'id' => 3,
@@ -39,7 +37,6 @@ class SeriesAndCharactersSeeder extends Seeder
                 'date_premiere_parution' => '2009-09-09',
                 'couverture' => 'attack-on-titan.jpg',
                 'serie_finie' => true,
-                'description' => 'Description de Attack on Titan',
             ],
             [
                 'id' => 4,
@@ -49,7 +46,6 @@ class SeriesAndCharactersSeeder extends Seeder
                 'date_premiere_parution' => '2003-12-01',
                 'couverture' => 'death-note.jpg',
                 'serie_finie' => true,
-                'description' => 'Description de Death Note',
             ],
             [
                 'id' => 5,
@@ -59,7 +55,6 @@ class SeriesAndCharactersSeeder extends Seeder
                 'date_premiere_parution' => '2014-07-07',
                 'couverture' => 'my-hero-academia.jpg',
                 'serie_finie' => false,
-                'description' => 'Description de My Hero Academia',
             ],
             [
                 'id' => 6,
@@ -69,7 +64,6 @@ class SeriesAndCharactersSeeder extends Seeder
                 'date_premiere_parution' => '2016-02-15',
                 'couverture' => 'demon-slayer.jpg',
                 'serie_finie' => true,
-                'description' => 'Description de Demon Slayer: Kimetsu no Yaiba',
             ],
         ]);
 
