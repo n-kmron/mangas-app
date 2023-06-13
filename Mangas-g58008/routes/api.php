@@ -21,6 +21,6 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 Route::get(
     '/serie/{serie_id?}/characters',
     [
-        \App\Http\Controllers\MangasCtrl::class, 'displayCharacters'
+        \App\Http\Controllers\MangasCtrl::class, 'getCharacters'
     ]
 );

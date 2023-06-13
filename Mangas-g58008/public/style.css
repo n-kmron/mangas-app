@@ -2,26 +2,30 @@
           box-sizing: border-box;
           margin: 0;
           padding: 0;
+          font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+}
+
+body {
+          height: 100vh;
 }
 
 header, footer {
-          padding: 30px;
           color: white;
           display: flex;
           justify-content: center;
+          background-color: rgb(54, 48, 48);
 }
 
 header {
-          background-color: black;
+          padding: 70px;
 }
 
 footer {
-                    background-color: lightgray;
+          padding: 40px;
 }
 
 main {
           display: flex;
-          justify-content:flex-start;
 }
 
 main nav {
@@ -29,14 +33,15 @@ main nav {
           padding: 10px;
           display: flex;
           flex-direction: column;
+          width: 20%;
 }
 
 main nav a {
           text-decoration: none;
+          text-align: center;
           color: white;
           background-color: black;
-          border-radius: 10px;
-          border: 1px solid white;
+          border-radius: 4px;
           padding: 10px;
           margin-bottom: 20px;
 }
@@ -47,22 +52,39 @@ main nav a:hover {
 
 .content {
           padding: 30px;
+          max-width: 80%;
 }
 
 .series {
           display: flex;
-          flex-direction: column;
+          flex-wrap: wrap;
           margin: 10px;
-}
-
-.affichage-serie {
-          display: flex;
 }
 
 .serie {
           border: 1px solid black;
-          padding: 5px;
+          padding: 15px;
           margin: 5px;
+          flex-basis: 32%;
+          background-color: rgba(128, 128, 128, 0.2);
+}
+
+.serie img {
+          margin-right: 15px;
+}
+
+.serie a {
+          color: black;
+          font-weight: bold;
+          margin-bottom: 15px;
+}
+
+.serie a:hover {
+          opacity: 0.7;
+}
+
+.affichage-serie {
+          display: flex;
 }
 
 form {
@@ -72,6 +94,16 @@ form {
 }
 
 form input, form button {
-          margin: 10px;
-          padding: 10px;
+          margin-top: 10px;
+          margin-bottom: 10px;
+          padding: 8px;
+}
+
+.charactersLink {
+          cursor: pointer;
+          text-decoration: underline;
+}
+
+span {
+          display: none;
 }

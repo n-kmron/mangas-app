@@ -3,13 +3,14 @@
 
 <head>
           <meta charset="UTF-8">
-          <title>58008 - @yield('title')</title>
+          <title>Mes mangas - @yield('title')</title>
           <link rel="stylesheet" type="text/css" href="/style.css">
+          <script defer src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 </head>
 
 <body>
           <header>
-                    <h1>WEBG4 - Serie - Manga</h1>
+                    <h1>Mon catalogue de mangas</h1>
           </header>
           <main>
                     <nav>
@@ -21,7 +22,7 @@
                     </div>
           </main>
           <footer>
-                    <p>WEBG4 - ARO - g58008 NOUPOUE Cameron</p>
+                    <p>Entièrement créé et développé par Cameron Noupoue</p>
           </footer>
 </body>
 
