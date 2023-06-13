@@ -15,12 +15,12 @@ class Mangas
                     return $series;
           }
 
-          public static function createSerie($title, $author, $nbvol, $date, $couverture, $isFinish)
+          public static function createSerie($title, $author, $nbvol, $date, $couverture, $isFinish, $description)
           {
                     $pdo = DB::getPdo();
                     DB::insert(
-                              "INSERT INTO series (titre, auteur, nombre_volumes, date_premiere_parution, couverture, serie_finie) VALUES (?, ?, ?, ?, ?, ?)",
-                              [$title, $author, $nbvol, $date, $couverture, $isFinish]
+                              "INSERT INTO series (titre, auteur, nombre_volumes, date_premiere_parution, couverture, serie_finie, description) VALUES (?, ?, ?, ?, ?, ?, ?)",
+                              [$title, $author, $nbvol, $date, $couverture, $isFinish, $description]
                     );
           }
 

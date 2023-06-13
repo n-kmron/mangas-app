@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Mangas;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Redirect;
 use Illuminate\Database\QueryException;
 
 class MangasCtrl extends Controller
@@ -22,7 +23,7 @@ class MangasCtrl extends Controller
             if (empty($_POST["done"])) {
                 $isFinish = false;
             }
-            Mangas::createSerie($_POST["title"], $_POST["author"], $_POST["nbvol"], $_POST["date"], $_POST["couverture"], $isFinish);
+            Mangas::createSerie($_POST["title"], $_POST["author"], $_POST["nbvol"], $_POST["date"], $_POST["couverture"], $isFinish, $_POST['description']);
             //return redirect('newserie')->with('message', "La série n'a pas pu être enregistrée");
             return view('newserie');
         } catch (QueryException $e) {

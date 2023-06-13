@@ -10,10 +10,14 @@
           <label for="author"><b>Author:</b></label>
           <input type="text" placeholder="Enter author" name="author" required>
 
+          <label for="description"><b>Description:</b></label>
+          <textarea rows="4" cols="40" name="description">
+          </textarea>
+
           <label for="nbvol"><b>Number of vol.:</b></label>
           <input type="number" placeholder="Enter number of vol." name="nbvol" required>
 
-          <label for="date">Date de création :</label>
+          <label for="date"><b>Date de création :</b></label>
           <input type="date" name="date" value="2023-06-13" max="2023-06-13">
 
           <label for="couverture"><b>Couverture:</b></label>
