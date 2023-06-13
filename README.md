@@ -7,6 +7,7 @@ We have designed a pleasant and easy to use visual webapp for users with all our
 ## Building and launch
 
 * cp .env.example .env
+* composer install
 * php artisan key:generate
 * php artisan migrate --seed
 * php artisan serve 
