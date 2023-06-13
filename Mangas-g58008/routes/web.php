@@ -19,3 +19,15 @@ Route::get(
         \App\Http\Controllers\MangasCtrl::class, 'loadAccueil'
     ]
 );
+
+
+Route::get('/serie/create', function () {
+    return view('newserie');
+})->name('newserie');
+
+Route::post(
+    '/serie/create',
+    [
+        \App\Http\Controllers\MangasCtrl::class, 'createSerie'
+    ]
+);

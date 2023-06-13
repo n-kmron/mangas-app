@@ -4,8 +4,7 @@
 <head>
           <meta charset="UTF-8">
           <title>58008 - @yield('title')</title>
-          <link rel="stylesheet" type="text/css" href="style.css">
-          <script defer src="script.js"></script>
+          <link rel="stylesheet" type="text/css" href="/style.css">
 </head>
 
 <body>
@@ -15,7 +14,7 @@
           <main>
                     <nav>
                               <a href="/">Accueil</a>
-                              <a href="#">Nouvelle série</a>
+                              <a href="/serie/create">Nouvelle série</a>
                     </nav>
                     <div class="content">
                               @yield('content')
