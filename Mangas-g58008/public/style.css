@@ -1,0 +1,37 @@
+* {
+          box-sizing: border-box;
+          margin: 0;
+          padding: 0;
+}
+
+header, footer {
+          padding: 30px;
+          color: white;
+          display: flex;
+          justify-content: center;
+}
+
+header {
+          background-color: black;
+}
+
+footer {
+                    background-color: lightgray;
+}
+
+main {
+          display: flex;
+          justify-content:flex-start;
+          height: 70vh;
+}
+
+main nav {
+          background-color: grey;
+          padding: 10px;
+          display: flex;
+          flex-direction: column;
+}
+
+.content {
+          padding: 10px;
+}
