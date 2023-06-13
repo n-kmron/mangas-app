@@ -40,4 +40,12 @@ class MangasCtrl extends Controller
         $result = Mangas::getCharacters($serie_id);
         return json_encode($result);
     }
+
+    public function displayCharacters($serie_id)
+    {
+        $json_characters = MangasCtrl::getCharacters($serie_id);
+        $characters = json_decode($json_characters);
+        $series = Mangas::getSeries();
+        return view('welcome', ['characters' => $characters, 'series' => $series]);
+    }
 }

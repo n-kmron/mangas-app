@@ -43,7 +43,6 @@ main nav {
 
 .affichage-serie {
           display: flex;
-          justify-content: space-between;
 }
 
 .serie {
