@@ -3,14 +3,14 @@
 
 <head>
           <meta charset="UTF-8">
-          <title>Cameron - @yield('title')</title>
+          <title>58008 - @yield('title')</title>
           <link rel="stylesheet" type="text/css" href="style.css">
           <script defer src="script.js"></script>
 </head>
 
 <body>
           <header>
-                    <h1>WEBII - Serie - Manga</h1>
+                    <h1>WEBG4 - Serie - Manga</h1>
           </header>
           <main>
                     <nav>

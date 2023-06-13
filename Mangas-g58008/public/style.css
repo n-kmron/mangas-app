@@ -22,7 +22,6 @@ footer {
 main {
           display: flex;
           justify-content:flex-start;
-          height: 70vh;
 }
 
 main nav {
@@ -34,4 +33,21 @@ main nav {
 
 .content {
           padding: 10px;
+}
+
+.series {
+          display: flex;
+          flex-direction: column;
+          margin: 10px;
+}
+
+.affichage-serie {
+          display: flex;
+          justify-content: space-between;
+}
+
+.serie {
+          border: 1px solid black;
+          padding: 5px;
+          margin: 5px;
 }
