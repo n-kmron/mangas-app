@@ -1,7 +1,6 @@
 @extends('canevas')
 @section('title', 'Nouvelle série')
 @section('content')
-<h1>Création d'une nouvelle série</h1>
 <form action="/serie/create" method="post">
           @csrf
           <label for="title"><b>Titre:</b></label>

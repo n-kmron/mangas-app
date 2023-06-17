@@ -1,33 +1,42 @@
 @extends('canevas')
 @section('title', 'Accueil')
 @section('content')
-<h2>Les meilleures séries Manga</h2>
-<div class="series">
-    @foreach ($series as $serie)
-    <div class="serie">
-        <p class="charactersLink"><b>{{ $serie->titre }}</b><span>{{ $serie->id }}</span></p>
-        <div class=" affichage-serie">
-            <img src='/img/{{ $serie->couverture }}' alt="couverture" height="100px">
-            <div>
-                <div>
-                    <p><b>Auteur :</b> <i>{{ $serie->auteur }}</i></p>
-                    @if(!empty($serie->description))
-                    <p><b>Description :</b> <i>{{ $serie->description }}</i></p>
-                    @endif
-                    <p><b>Nombre de volumes :</b> <i>{{ $serie->nombre_volumes }}</i></p>
-                    <p><b>Date de création :</b> <i>{{ $serie->date_premiere_parution }}</i></p>
-                    @if($serie->serie_finie == 0)
-                    <p><b>Serie finie :</b> <i>non</i></p>
-                    @else
-                    <p><b>Serie finie :</b> <i>oui</i></p>
-                    @endif
+
+<div class="container swiper">
+    <div class="slide-container">
+        <div class="card-wrapper swiper-wrapper">
+            @foreach ($series as $serie)
+            <div class="card swiper-slide">
+                <div class="image-box">
+                    <img src='/img/{{ $serie->couverture }}' alt="couverture">
                 </div>
+                <div class="profile-details">
+                    <div class="details">
+                        <h3 class="charactersLink name"><b>{{ $serie->titre }}</b></h3>
+                        <hr>
+                        <h4 class="author"><b>Auteur :</b> <i>{{ $serie->auteur }}</i></h4>
+                        @if(!empty($serie->description))
+                        <h4 class="description"><b>Description :</b> <i>{{ $serie->description }}</i></h4>
+                        @endif
+                        <p><b>Nombre de volumes :</b> <i>{{ $serie->nombre_volumes }}</i></p>
+                        <p><b>Date de création :</b> <i>{{ $serie->date_premiere_parution }}</i></p>
+                        @if($serie->serie_finie == 0)
+                        <p><b>Serie finie :</b> <i>non</i></p>
+                        @else
+                        <p><b>Serie finie :</b> <i>oui</i></p>
+                        @endif
+                    </div>
+                </div>
+                <button class="characterBtn" data-id="{{ $serie->id }}">Voir les personnages</button>
+                <div class="charactersResult" data-id="{{ $serie->id }}"></div>
             </div>
+            @endforeach
         </div>
-        <p class="charactersResult"></p>
     </div>
-    @endforeach
 </div>
+<div class="swiper-button-next"></div>
+<div class="swiper-button-prev"></div>
+<div class="swiper-pagination"></div>
 @endsection
 
 
@@ -35,11 +44,12 @@
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 <script>
     $(document).ready(function() {
-        $("div.serie").each(function() {
-            let serieId = $(this).find("p.charactersLink span").text()
+        $(".container").each(function() {
+            let serieId = $(`.charactersResult`).data("id");
 
-            $(this).find("p.charactersLink").click(function() {
-                let charactersResult = $(this).siblings("p.charactersResult");
+            $(this).find(".characterBtn").click(function() {
+                console.log("ok: " + serieId);
+                let charactersResult = $(`.charactersResult[data-id="${serieId}"] `);
                 charactersResult.empty();
                 let url = "/api/serie/" + serieId + "/characters";
 

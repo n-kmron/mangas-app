@@ -1,0 +1,47 @@
+form {
+          max-width: 800px;
+          margin: 0 auto;
+          padding: 20px;
+          background-color: #4b4343;
+          border-radius: 5px;
+}
+
+label {
+          font-weight: bold;
+          margin-bottom: 5px;
+}
+
+input[type="text"],
+textarea,
+input[type="number"],
+input[type="date"],
+form button {
+          width: 100%;
+          padding: 8px;
+          background-color: #847272;
+          border: 1px solid #4b4343;
+          border-radius: 4px;
+          margin-bottom: 10px;
+}
+
+input[type="text"]::placeholder,
+textarea::placeholder,
+input[type="number"]::placeholder,
+input[type="date"]::placeholder {
+          color: black;
+}
+
+textarea {
+          resize: vertical;
+}
+
+button[type="submit"] {
+          background-color: #4CAF50;
+          color: white;
+          border: none;
+          cursor: pointer;
+}
+
+button[type="submit"]:hover {
+          background-color: #45a049;
+}
